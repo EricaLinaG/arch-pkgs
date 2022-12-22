@@ -1,12 +1,12 @@
-# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+# Maintainer: Erica Lina <ericalinagebhart@gmail.com>
 pkgname=Xmonad-setup
 pkgver=1
 pkgrel=1
 pkgdesc="Everything needed by my Xmonad Setup"
 arch=(any)
-url="https://github.com/ericgebhart/arch-pkgs"
+url="https://github.com/EricaLinaG/arch-pkgs"
 license=(MIT)
-groups=(eagebhart)
+groups=(ericagebhart)
 
 ### XMonad with accessories and haskell.
 ### This with the Make for the aur stuff, My Xmonad-setup repo and

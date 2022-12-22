@@ -18,7 +18,7 @@ nec-aur := yay rar
 
 Iot-aur := particle-cli
 
-xmonad-aur := polybar xmonad-log nerd-fonts-complete
+xmonad-aur := polybar nerd-fonts-complete
 
 aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 	$(Anbox) $(tablet-apps-aur) $(games-aur) $(maker-aur) \
@@ -26,7 +26,7 @@ aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 
 
 # groups cannot be installed via dependencies in PKGBUILD
-groups := xorg xorg-apps xorg-fonts alsa xfce4 xfce-goodies
+groups := xorg xorg-apps xorg-fonts alsa 
 
 everything := $(packages) $(groups) $(aur-packages)
 
@@ -57,7 +57,6 @@ necessities: $(nec-aur) yay
 emacs-pkg-setup: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts
 X11-apps: audio $(X11-apps-aur)
-Xfce: xfce4 xfce-goodies
 audio: shortwave
 devel: $(devel-aur) $(min-devel-aur)
 maker: devel $(maker-aur)

@@ -1,10 +1,10 @@
-# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+# Maintainer: Erica Lina <ericalinagebhart@gmail.com>
 pkgname=anbox
 pkgver=1
 pkgrel=1
 pkgdesc="Stuff for running android in a box."
 arch=(any)
-url="https://github.com/ericgebhart/arch-pkgs"
+url="https://github.com/EricaLinaG/arch-pkgs"
 license=(MIT)
 groups=(eagebhart)
 
