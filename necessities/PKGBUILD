@@ -27,7 +27,7 @@ depends+=(ttf-ubuntu-font-family awesome-terminal-fonts \
 
 # Debugging tools ok. why not.
 depends+=(lsof bind-tools mtr socat htop iotop openbsd-netcat)
-depends+=(strace tcpdump whois iftop dstat)
+depends+=(strace tcpdump traceroute whois iftop dstat)
 
 # Shells - zsh and fish are used by closh. Nice zsh completions here.
 depends+=(zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting \

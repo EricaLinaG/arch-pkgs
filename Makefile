@@ -1,8 +1,9 @@
 packages := $(shell ls -d */ | sed 's,/,,')
 
+###################################################
 # AUR packages
+###################################################
 X11-apps-aur := yacreader slack-desktop shortwave
-
 
 # for some reason touchegg needs xorgproto-git at the moment.
 tablet-apps-aur := xorgproto-git touchegg-qt5 iio-sensor-proxy-git screenrotator-git
@@ -26,9 +27,13 @@ aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 
 
 # groups cannot be installed via dependencies in PKGBUILD
-groups := xorg xorg-apps xorg-fonts alsa 
+groups := xorg xorg-apps xorg-fonts alsa
 
 everything := $(packages) $(groups) $(aur-packages)
+
+###################################################
+# basic generic targets and rules
+###################################################
 
 all: $(everything)
 
@@ -52,6 +57,9 @@ $(aur-packages):
 $(groups):
 	sudo pacman -S --noconfirm --needed $@
 
+###################################################
+# targets and dependencies.
+###################################################
 # not necessary to list them, but it's clearer.
 necessities: $(nec-aur) yay
 emacs-pkg-setup: necessities natural-language mu-git
@@ -74,3 +82,6 @@ baseX11: necessities X11 audio Xmonad
 
 git-sub-update:
 	git submodule update --recursive --remote
+
+git-sub-master:
+	git submodule -q foreach git pull -q origin master
