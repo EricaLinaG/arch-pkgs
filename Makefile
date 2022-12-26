@@ -19,7 +19,7 @@ nec-aur := yay rar
 
 Iot-aur := particle-cli
 
-xmonad-aur := polybar nerd-fonts-complete
+xmonad-aur := polybar # nerd-fonts-complete
 
 aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 	$(Anbox) $(tablet-apps-aur) $(games-aur) $(maker-aur) \
@@ -79,6 +79,8 @@ anbox: $(Anbox)
 Iot: $(Iot-aur) minduino $(min-devel-aur) necessities
 
 baseX11: necessities X11 audio Xmonad
+
+minumum: baseX11 emacs-pkg-setup
 
 git-sub-update:
 	git submodule update --recursive --remote
