@@ -19,7 +19,7 @@ nec-aur := yay rar
 
 Iot-aur := particle-cli
 
-xmonad-aur := polybar # nerd-fonts-complete
+xmonad-aur := polybar xmonad-log # nerd-fonts-complete
 
 aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 	$(Anbox) $(tablet-apps-aur) $(games-aur) $(maker-aur) \
