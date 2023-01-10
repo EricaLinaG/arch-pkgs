@@ -15,7 +15,7 @@ games-aur := pcsxr rpcs3-git libretro-pcsx2
 
 maker-aur := slic3r-bin kisslicer octoprint-venv octoprint-metadata-preprocessor \
 	mattercontrol printrun repetier-host  # replicatorg
-nec-aur := yay rar
+nec-aur := yay rar ttf-iosevka ttc-iosevka
 
 Iot-aur := particle-cli
 
